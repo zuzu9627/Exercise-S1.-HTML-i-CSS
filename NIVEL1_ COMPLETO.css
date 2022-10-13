@@ -1,0 +1,115 @@
+* {   /* características generales */
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* para que las cajas no se desborden */
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 1200px;
+}
+.header {
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .menu {
+        background-color: #2D4059;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+        .logo {
+
+            background-color: #EA5455;
+            flex: 1 1 auto;
+        }
+
+        .nav {background-color: #EA5455;
+            flex: 5 1 auto;
+        }
+        
+        .social {background-color: #EA5455;
+           flex: 1 1 auto;
+        }
+    .texto-principal{
+        background-color:#F07B3F;
+    }
+        h1 {background-color: #FFD460;}
+
+
+
+.section {
+    background-color: black;
+    display: flex;
+}
+    .articulos{
+        background-color: #4e4e6a;
+        flex: 2 1 auto; /* se establece proporcion */
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .article{
+            background-color: #1f6cb0;
+            flex: 1 1 40%;
+        }
+        .navegacion{
+            background-color: #70a3c4;
+            flex: 2 1 100%;
+        }
+    .aside{
+        background-color: #f73f52;
+        flex: 1 1 auto;
+
+    }
+        .publicidad{
+            background-color: #ffea85;
+        }
+.footer {
+    background-color: black;
+}
+    .pie{
+        background-color: #e6af2e;
+        display: flex;
+        align-items: stretch;
+    }
+
+    /* versión tablet */
+        @media all and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+            /* @media all and (max-width:48em) { */
+                .section {
+                    background-color: #FDFF00;
+                    flex-direction: column;
+                }
+            }
+            @media all and (min-width: 1025px) and (max-width: 1280px) and (orientation: portrait){
+                /* @media all and (max-width:48em) { */
+                    .section {
+                        background-color: #FDFF00;
+                        flex-direction: column;
+                    }
+                }
+
+/* versión movil */
+@media all and (max-width: 767px) { 
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .article {
+        background-color: #558991;
+    }
+
+    .navegacion {
+        background-color: #97d4c5;
+    }
+    .articulos{flex-direction: column;}
+    .section {
+        background-color: #FDFF00;
+        flex-direction: column;
+    }
+}
